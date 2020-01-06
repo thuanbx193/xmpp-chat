@@ -1,0 +1,68 @@
+{
+  "name": "strophe.js",
+  "description": "Strophe.js is an XMPP library for JavaScript",
+  "version": "1.3.2",
+  "homepage": "http://strophe.im/strophejs",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/strophe/strophejs.git"
+  },
+  "keywords": [
+    "xmpp",
+    "message",
+    "bosh",
+    "websocket",
+    "browser"
+  ],
+  "files": [
+    "dist/strophe.js",
+    "CHANGELOG.txt",
+    "LICENSE.txt",
+    "README.txt",
+    "src/"
+  ],
+  "author": "Jack Moffit (metajack)",
+  "contributors": [
+    "Nathan Zorn (thepug)",
+    "Andreas Guth (Gordin)",
+    "Anton Stroganov (Aeon)",
+    "Florian Zeitz (Florob)",
+    "Christopher Zorn (twonds)",
+    "dodo",
+    "Lee Boynton (lboynton)",
+    "Theo Cushion (theozaurus)",
+    "Brendon Crawford (brendoncrawford)",
+    "JC Brand (jcbrand)"
+  ],
+  "license": "MIT",
+  "main": "dist/strophe.js",
+  "browser": "strophe.js",
+  "scripts": {
+    "lint": "make jshint",
+    "clean": "make clean",
+    "doc": "make doc"
+  },
+  "volo": {
+    "url": "https://raw.githubusercontent.com/strophe/strophejs/release-{version}/strophe.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "babel-loader": "^8.0.0",
+    "almond": "~0.3.0",
+    "es6-promise": "^4.1.0",
+    "eslint": "4.19.1",
+    "http-server": "^0.10.0",
+    "jquery": "3.2.1",
+    "minimist": "^1.2.0",
+    "npm": "^5.7.1",
+    "qunitjs": "~1.16.0",
+    "run-headless-chromium": "^0.1.1",
+    "requirejs": "2.3.5",
+    "sinon": "1.17.7",
+    "sinon-qunit": "~2.0.0",
+    "webpack": "^4.0.1",
+    "webpack-cli": "^2.1.4"
+  }
+}

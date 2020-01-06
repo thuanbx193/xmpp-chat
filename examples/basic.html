@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Strophe.js CHAT Example</title>
+  <script data-require="jquery" data-semver="2.1.4" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/strophe.js/1.2.14/strophe.min.js'></script>
+  <!-- muc plugin -->
+  <script src='//rawgit.com/strophe/strophejs-plugin-muc/muc/lib/strophe.muc.js'></script>
+  <script src="basic.js"></script>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <style type="text/css">
+    h1 {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">XMPP Chat</a>
+    </div>
+  </div>
+</nav>  
+  
+  <div class="container">
+    <div id='login' class="panel panel-default">
+      <div class="panel-heading">Login</div>
+      <form name='cred' class="panel-body">
+        <div class="form-group">
+          <label for='jid'>Username (JID):</label>
+          <input type='text' id='jid' />
+        </div>
+        <div class="form-group">
+          <label for='pass'>Password:</label>
+          <input type='password' id='pass' />
+        </div>
+        <input type='button' id='connect' value='connect' />
+      </form>
+    </div>
+    <div id='chat' class="panel panel-default row">
+      <div class="panel-heading">Chat O2O</div>
+      <div class="col-md-6">
+        <form name='chat' class="panel-body">
+          <div class="form-group">
+            <label for='msg'>msg:</label>
+            <input type='text' id='msg' />
+          </div>
+          <div class="form-group">
+            <label for='to'>to:</label>
+            <input type='text' id='to' />
+          </div>
+          <input type='button' id='send' value='send' />
+        </form>
+      </div>
+      <div id="renderchatO2O" class="col-md-6">
+      </div>
+    </div>
+    <div id='rooms' class="panel panel-default row">
+      <div class="panel-heading">Rooms</div>
+      <div class="col-md-6">
+        <form name='rooms' class="panel-body">
+          <label for='room'>room:</label>
+          <input type='text' id='room' value='' />
+          <input type='button' id='btnEnter' value='enter' />
+          <input type='button' id='btnExit' value='exit' />
+          <input type='button' id='btnList' value='list' />
+          <input type='button' id='btnCreateRoom' value='create' />
+        </form>
+      </div>
+      <div class="col-md-6">
+        <form name='rooms' class="panel-body">
+          <label for='room'>Msg:</label>
+          <input type='text' id='msgRoom' value='' />
+          <input type='button' id='sendMsgRoom' value='Send' />
+        </form>
+         <div id="renderchatRoom">
+      </div>
+      </div>
+    </div>
+    <div id='presence' class="panel panel-default">
+      <div class="panel-heading">Presence</div>
+      <form name='presence' class="panel-body">
+        <input type='button' id='btnGetPres' value='getPres' />
+        <input type='button' id='btnSubPres' value='subscribePres' />
+        <input type='button' id='btnRoster' value='getRoster' />
+        <input type='button' id='btnAway' value='setAway' />
+        <input type='button' id='btnSend' value='sendPres' />
+        <input type='button' id='btnSend1' value='sendPres1' />
+      </form>
+    </div>
+    <b>Trace:</b>
+    <div id='log'></div>
+  </div>
+</body>
+
+</html>
